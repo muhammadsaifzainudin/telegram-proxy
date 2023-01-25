@@ -1,7 +1,7 @@
-#Docker build
+# Docker build
 docker build -t saif/telegram-proxy .
 
-#Docker run
+# Docker run
 docker run -d \
 -e BOT_TOKEN=<BOT_TOKEN> \
 -e CHAT_ID=<CHAT_ID> \
