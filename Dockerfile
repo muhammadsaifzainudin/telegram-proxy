@@ -1,4 +1,4 @@
-FROM python:3.10.9
+FROM python:3.9.16
 
 WORKDIR /code
 
@@ -8,6 +8,6 @@ RUN pip install --no-cache-dir --upgrade -r /code/requirements.txt
 
 COPY ./app /code/app
 
-EXPOSE 8000
+EXPOSE 8081
 
-CMD ["uvicorn", "app.main:app", "--host", "0.0.0.0", "--reload"]
+CMD ["uvicorn", "app.main:app", "--host", "0.0.0.0", "--port", "8081", "--reload"]
